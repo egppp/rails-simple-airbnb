@@ -1,0 +1,23 @@
+<h1>AirBnB</h1>
+<h2>Find a flat!</h2>
+
+<div class="container">
+  <div class = "row">
+    <% @flats.each do |flat| %>
+      <div class=" col-lg-4" style="width: 18rem;">
+        <div class="card mb-3">
+          <div class="card-body ">
+            <h5 class="card-title"><%= flat.name.truncate(30) %></h5>
+            <p class="card-text"><%= flat.address %></p>
+            <div class="d-flex">
+            <i class="fas fa-user-friends"></i><%= flat.number_of_guests %>
+            <i class="fas fa-euro-sign"></i><%= flat.price_per_night %>
+            </div>
+            <a href="<%= flat_path(flat) %>" class="card-link">More info</a>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<%= link_to("Create new flat", "flats/new") %>

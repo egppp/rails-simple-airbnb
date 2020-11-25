@@ -1,0 +1,8 @@
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome";
+@import "font-awesome-sprockets";
+
+#map-container-google-1 iframe {
+  height: 350px;
+  width: 600px;
+}
